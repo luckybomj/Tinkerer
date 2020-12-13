@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block title  %}
+<title>Tinkerer</title>
+{% endblock %}
+
+
+{% block body  %}
+<main class="container">
+  <div class="cart-deck mb-3 text-center">
+  {% for el in data%}
+ <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+    <h1 class="display-4">Услуги</h1>
+    <p class="lead">Лень делать что либо? Есть лишние деньги? Преобретай пакеты услуг, облегчи свою жизнь и избавься от нудной рутины!</p>
+  </div>
+
+  <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+    <div class="col">
+      <div class="card mb-4 shadow-sm">
+      <div class="card-header">
+        <h4 class="my-0 fw-normal">{{ el.title }}</h4>
+      </div>
+      <div class="card-body">
+        <h1 class="card-title pricing-card-title">{{el.price}} <small class="text-muted">Y.E.</small></h1>
+        <ul class="list-unstyled mt-3 mb-4">
+          <li>{{el.service}}</li>
+        </ul>
+        <a href="/buy/{{ el.id }}" class="w-100 btn btn-lg btn-outline-primary">Преобрести пакет услуг!</a>
+      </div>
+    </div>
+    </div>
+  </div>>
+  {% endfor %}
+  </div>
+{% endblock %}

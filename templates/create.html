@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title  %}
+<title>Tinkerer</title>
+{% endblock %}
+
+
+{% block body %}
+<div class="conteiner">
+    <h1>Добавлние пакет услуг</h1>
+    <form method="post">
+        <input type="text" class="form-control" name="title" id="title" placeholder="Введите название услуги"></br>
+        <input type="number" class="form-control" name="price" id="price" placeholder="Введите стоимость пакета услуг"></br>
+        <input type="text" class="form-control" name="service" id="service" placeholder="Введите описание предоставляемого пакета услуг"></br>
+        <button class="btn btn-success" type="submit">Добавить услугу</button>
+    </form>
+</div>
+{% endblock %}
